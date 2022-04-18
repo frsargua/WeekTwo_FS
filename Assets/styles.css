@@ -238,11 +238,11 @@ header {
 }
 
 @media screen and (max-width: 768px) {
-    /* Reducing margin in mobile screen */
+  /* Reducing margin in mobile screen */
   .hero-box-container .hero-box {
     margin: 0.3rem;
   }
-/* Making all font sizes bigger for smartphones */
+  /* Making all font sizes bigger for smartphones */
   .hero-box-small h1 {
     font-size: 4vw;
   }
@@ -278,4 +278,47 @@ header {
 /* Add background color to button when hovering over it to give better contrast */
 .button-container:hover > .action-button {
   background-color: rgba(255, 217, 0, 0.3);
+}
+
+
+/* <--------------------------Action---------------------------> */
+/* Separate the action-section from the about-me section */
+.contact-me {
+  padding-top: 3rem;
+}
+
+.contact-me .contact-me-action {
+  background-color: var(--background-primary);
+  height: 10vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 0 2rem;
+}
+
+.contact-me .contact-me-action h3 {
+  font-size: 2rem;
+  color: var(--font-secondary-color);
+}
+
+/* I have reused the action-button class and added some changes using another class */
+.contact-me .contact-me-action .contact-me-action-button {
+  color: var(--font-primary-color);
+  background-color: var(--background-secondary);
+  font-weight: bold;
+}
+
+.contact-me-action > a:hover {
+  transform: scale(var(--scale-factor));
+}
+
+@media screen and (max-width: 768px) {
+    .contact-me .contact-me-action  {
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 20vh;
+    text-align: center;
+  }
 }
