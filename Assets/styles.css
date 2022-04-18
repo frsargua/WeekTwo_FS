@@ -25,6 +25,10 @@ body {
   font-family: Inter, Arial, Helvetica, sans-serif;
 }
 
+h2 {
+  font-size: 4rem;
+}
+
 .block {
   padding: 5rem 2rem;
 }
@@ -33,6 +37,11 @@ body {
 .container {
   max-width: 1140px;
   margin: 0 auto;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 3rem;
 }
 
 /* <------------------------------Header-------------------------------> */
@@ -280,6 +289,99 @@ header {
   background-color: rgba(255, 217, 0, 0.3);
 }
 
+/* <--------------------------About Me---------------------------> */
+.about-me {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  margin: auto;
+  box-shadow: 0 0 20px 10px var(--box-shadow-color);
+  border-radius: 10px;
+  padding: 2rem;
+}
+/* Makes box larger when hovered */
+.about-me:hover {
+  transform: scale(1.01);
+}
+
+/* Makes containers be spaced to each end in a row. */
+.about-me-Container {
+  display: --webkit-flexbox; /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-box; /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -ms-flexbox; /* TWEENER - IE 10 */
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  /* Aligns boxes in the center in the vertical axis */
+  align-items: center;
+  width: 100%;
+  padding-bottom: 2rem;
+}
+
+/* Makes image take 25% of the width of the parent container */
+.about-me-Container .about-me-photo {
+  flex: 0 0 25%;
+  border-radius: 50%;
+  box-shadow: 0 0 5px 1px var(--box-shadow-color);
+  overflow: hidden;
+}
+
+.about-me-Container .about-me-photo img {
+  width: 100%;
+}
+
+.about-me-Container > .text {
+  flex: 0 0 70%;
+  width: 100%;
+}
+
+/* Technologies */
+.about-me-technologies > h3 {
+  text-align: center;
+  padding-bottom: 1.5rem;
+}
+.logo-group {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.logo-group .logo-container {
+  flex: 0 0 10%;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.logo-group .logo-container .logo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media screen and (max-width: 768px) {
+  .about-me {
+    width: 100%;
+  }
+  /* Changed the display flex to display block since flex basics did not work properly */
+  .about-me-Container {
+    display: block;
+  }
+
+  .about-me-Container .about-me-photo {
+    margin: auto;
+    width: 50%;
+    margin-bottom: 2rem;
+  }
+  .about-me-Container > .text {
+    text-align: justify;
+    text-justify: inter-word;  }
+
+  .logo-group {
+    justify-content: space-around;
+  }
+  .logo-group .logo-container {
+    flex: 0 0 20%;
+  }
+}
 
 /* <--------------------------Action---------------------------> */
 /* Separate the action-section from the about-me section */
@@ -315,7 +417,7 @@ header {
 }
 
 @media screen and (max-width: 768px) {
-    .contact-me .contact-me-action  {
+  .contact-me .contact-me-action {
     flex-direction: column;
     justify-content: space-evenly;
     height: 20vh;
