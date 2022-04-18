@@ -13,20 +13,27 @@
   /* Transition */
   --scale-factor: 1.03;
 }
+
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
+
 body {
   color: var(--font-primary-color);
   font-family: Inter, Arial, Helvetica, sans-serif;
 }
+
+.block {
+  padding: 5rem 2rem;
+}
+
 /* Makes containers take no more than 1140px and center in the middle using margin*/
 .container {
-    max-width: 1140px;
-    margin: 0 auto;
-  }
+  max-width: 1140px;
+  margin: 0 auto;
+}
 
 /* <------------------------------Header-------------------------------> */
 /* <--------------------------NavBar---------------------------> */
@@ -38,6 +45,7 @@ header {
   width: 100%;
   z-index: 999;
 }
+
 /* This makes the navlogo and the a tag links be push to separate ends in a row (for desktop)*/
 .navbar-container {
   display: flex;
@@ -62,15 +70,18 @@ header {
   max-height: 0;
   transition: all 0s ease;
 }
+
 /* Desktop - makes links be in a row */
 .navbar ul {
   display: flex;
   flex-direction: row;
 }
+
 /* Keeps a links separated, so they do not stick side by side */
 .navbar > ul > li {
   padding: 1rem 2rem;
 }
+
 /* Removes a tag decoration  */
 /* Makes text stand out by using a white font color */
 /* Makes all text uppercase for readability */
@@ -90,11 +101,12 @@ header {
 }
 
 @media screen and (max-width: 768px) {
-    /* Makes logo and container with nav-links arrange in a column */
+  /* Makes logo and container with nav-links arrange in a column */
   .navbar-container {
     flex-direction: column;
     align-items: center;
   }
+
   /* Makes nav-bar li be in a column wit the text to the left */
   .navbar ul {
     flex-direction: column;
@@ -107,6 +119,7 @@ header {
     padding: 1rem 2rem;
     width: 100vw;
   }
+
   /* Opacity of 0 when the image is unclicked */
   .navbar ul li .navbar-links {
     opacity: 0;
@@ -118,15 +131,151 @@ header {
     max-height: 100%;
     transition: all 2s ease;
   }
-/* Adds border underneath each li element */
+
+  /* Adds border underneath each li element */
   .nav-toggler:checked ~ .navbar ul li {
     border-top: 1px solid var(--nav-bar-list-border);
     transition: border 200ms ease-out;
   }
-/* Phone - Makes the opacity of the a tag .navbar-links equals to 1 so they are visible 
+
+  /* Phone - Makes the opacity of the a tag .navbar-links equals to 1 so they are visible 
     only when the checkbox is clicked */
   .nav-toggler:checked ~ .navbar ul li .navbar-links {
     opacity: 1;
     transition: opacity 250ms ease-in 250ms;
   }
+}
+
+/* <------------------------------Main-------------------------------> */
+/* <--------------------------Hero---------------------------> */
+
+.hero {
+  mask-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 1) 90%,
+    transparent 100%
+  );
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+/* Makes div as the background image container and positions itself as absolute relative to the hero section */
+/* I had problems with the blur filter, hence i used this "HACK" */
+.hero .background {
+  background-image: url("./images/garduation-photo.jpg");
+  background-position: bottom 50% center;
+  background-size: cover;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: -1;
+}
+
+.hero .hero-box-container {
+  color: var(--font-secondary-color);
+  /* Aligns hero-box's in a column */
+  display: flex;
+  flex-direction: column;
+  /* Makes the text transparent and 20X bigger. */
+  opacity: 0.01;
+  transform: scale(20);
+  /* The transition affects all effects and takes place in 6s */
+  transition: all 0.6s;
+  /* Prevents the transition from getting triggered outside the hero Section */
+  pointer-events: none;
+}
+
+.hero-box-container .hero-box {
+  margin: 1.5rem;
+  /* Prevents the text from wrapping on a new line, so the phrases stay in one line */
+  white-space: nowrap;
+  width: 100%;
+}
+
+/* SMALL */
+/* Small letters containing box */
+.hero-box-small {
+  margin-bottom: 3rem;
+}
+
+/* This makes the text size responsive to the viewport */
+.hero-box-small h1 {
+  font-size: 2vw;
+}
+
+/* MEDIUM */
+.hero-box-medium h3 {
+  font-size: 2vw;
+}
+
+/* LARGE */
+.hero-box-large h2 {
+  font-size: 6vw;
+}
+/* Positions text to the left */
+.hero-box-left {
+  text-align: left;
+}
+
+/* Positions text to the right */
+.hero-box-right {
+  text-align: right;
+}
+
+/* Transitions and effects */
+/* BLurs the background when hovering on the section */
+.hero:hover .background {
+  filter: blur(2px) brightness(0.9);
+}
+
+/* Makes text visible and smaller to a scale of 1 ( original size) when hovering on the hero section */
+.hero:hover .hero-box-container {
+  opacity: 1;
+  transform: scale(1);
+}
+
+@media screen and (max-width: 768px) {
+    /* Reducing margin in mobile screen */
+  .hero-box-container .hero-box {
+    margin: 0.3rem;
+  }
+/* Making all font sizes bigger for smartphones */
+  .hero-box-small h1 {
+    font-size: 4vw;
+  }
+
+  .hero-box-medium h3 {
+    font-size: 3vw;
+  }
+  .hero-box-large h2 {
+    font-size: 8vw;
+  }
+}
+
+/* Button */
+.button-container {
+  width: fit-content;
+  margin: auto;
+  margin-top: 3rem;
+}
+/* Styling for the action button */
+.action-button {
+  text-decoration: none;
+  padding: 0.5rem 2rem;
+  border: 1px solid var(--background-secondary);
+  border-radius: 25px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: var(--font-secondary-color);
+}
+/* Increases the size of the button upon hovering over it */
+.button-container:hover {
+  transform: scale(var(--scale-factor));
+}
+
+/* Add background color to button when hovering over it to give better contrast */
+.button-container:hover > .action-button {
+  background-color: rgba(255, 217, 0, 0.3);
 }
