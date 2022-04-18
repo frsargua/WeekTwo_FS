@@ -1,0 +1,20 @@
+:root {
+    /* Background */
+    --background-primary: black;
+    --background-secondary: rgba(255, 255, 255, 0.87);
+    /* Fonts */
+    --font-primary-color: rgba(0, 0, 0, 0.87);
+    --font-secondary-color: rgba(255, 255, 255, 0.87);
+    /* Nav-bar */
+    --nav-bar-list-border: rgba(128, 128, 128, 0.418);
+    /* Styling */
+    --border-radius: 5px;
+    --box-shadow-color: #f3f3f3;
+    /* Transition */
+    --scale-factor: 1.03;
+  }
+  *{
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+  }
