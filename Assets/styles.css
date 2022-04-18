@@ -1,20 +1,132 @@
 :root {
-    /* Background */
-    --background-primary: black;
-    --background-secondary: rgba(255, 255, 255, 0.87);
-    /* Fonts */
-    --font-primary-color: rgba(0, 0, 0, 0.87);
-    --font-secondary-color: rgba(255, 255, 255, 0.87);
-    /* Nav-bar */
-    --nav-bar-list-border: rgba(128, 128, 128, 0.418);
-    /* Styling */
-    --border-radius: 5px;
-    --box-shadow-color: #f3f3f3;
-    /* Transition */
-    --scale-factor: 1.03;
+  /* Background */
+  --background-primary: black;
+  --background-secondary: rgba(255, 255, 255, 0.87);
+  /* Fonts */
+  --font-primary-color: rgba(0, 0, 0, 0.87);
+  --font-secondary-color: rgba(255, 255, 255, 0.87);
+  /* Nav-bar */
+  --nav-bar-list-border: rgba(128, 128, 128, 0.418);
+  /* Styling */
+  --border-radius: 5px;
+  --box-shadow-color: #f3f3f3;
+  /* Transition */
+  --scale-factor: 1.03;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  color: var(--font-primary-color);
+  font-family: Inter, Arial, Helvetica, sans-serif;
+}
+/* Makes containers take no more than 1140px and center in the middle using margin*/
+.container {
+    max-width: 1140px;
+    margin: 0 auto;
   }
-  *{
-      padding: 0;
-      margin: 0;
-      box-sizing: border-box;
+
+/* <------------------------------Header-------------------------------> */
+/* <--------------------------NavBar---------------------------> */
+header {
+  background-color: var(--background-primary);
+  opacity: 0.95;
+  padding: 0 1rem;
+  position: fixed;
+  width: 100%;
+  z-index: 999;
+}
+/* This makes the navlogo and the a tag links be push to separate ends in a row (for desktop)*/
+.navbar-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+/* This makes the checkbox block disappear allowing the navlogo to be the only clickable box*/
+.navbar-container .nav-toggler {
+  display: none;
+}
+
+.navbar-container .nav-logo {
+  width: auto;
+  height: 50px;
+}
+
+/* Background color needed for navbar-links:hover */
+/* Max height of 0 allows makes the navbar non visible when the check box is not clicked */
+.navbar-container .navbar {
+  background-color: var(--background-primary);
+  max-height: 0;
+  transition: all 0s ease;
+}
+/* Desktop - makes links be in a row */
+.navbar ul {
+  display: flex;
+  flex-direction: row;
+}
+/* Keeps a links separated, so they do not stick side by side */
+.navbar > ul > li {
+  padding: 1rem 2rem;
+}
+/* Removes a tag decoration  */
+/* Makes text stand out by using a white font color */
+/* Makes all text uppercase for readability */
+/* Desktop - Opacity makes the text visible*/
+/* Transition affects opacity */
+.navbar ul li .navbar-links {
+  text-decoration: none;
+  color: var(--font-secondary-color);
+  text-transform: uppercase;
+  opacity: 1;
+  transition: opacity 150ms ease-in-out;
+}
+
+/* Hovering on links makes them darker, so the user can tell which option is being clicked */
+.navbar ul li .navbar-links:hover {
+  opacity: 0.7;
+}
+
+@media screen and (max-width: 768px) {
+    /* Makes logo and container with nav-links arrange in a column */
+  .navbar-container {
+    flex-direction: column;
+    align-items: center;
   }
+  /* Makes nav-bar li be in a column wit the text to the left */
+  .navbar ul {
+    flex-direction: column;
+    text-align: left;
+  }
+
+  /* Adding padding to the li */
+  /* Makes li take 100 % of the VW, since they are are in a flex display container */
+  .navbar > ul > li {
+    padding: 1rem 2rem;
+    width: 100vw;
+  }
+  /* Opacity of 0 when the image is unclicked */
+  .navbar ul li .navbar-links {
+    opacity: 0;
+  }
+
+  /* Adding expandible button */
+  /* Makes max-heigh 100% so the nav-bar appears when the checkbox is clicked */
+  .nav-toggler:checked ~ .navbar {
+    max-height: 100%;
+    transition: all 2s ease;
+  }
+/* Adds border underneath each li element */
+  .nav-toggler:checked ~ .navbar ul li {
+    border-top: 1px solid var(--nav-bar-list-border);
+    transition: border 200ms ease-out;
+  }
+/* Phone - Makes the opacity of the a tag .navbar-links equals to 1 so they are visible 
+    only when the checkbox is clicked */
+  .nav-toggler:checked ~ .navbar ul li .navbar-links {
+    opacity: 1;
+    transition: opacity 250ms ease-in 250ms;
+  }
+}
