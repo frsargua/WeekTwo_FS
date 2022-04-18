@@ -289,6 +289,91 @@ header {
   background-color: rgba(255, 217, 0, 0.3);
 }
 
+/* <--------------------------Porfolio Section---------------------------> */
+
+.porfolio {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.porfolio-box {
+  flex: 0 0 33.333%;
+  padding: 1rem;
+}
+
+.porfolio-box figure {
+  border: 3px solid var(--font-primary-color);
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+  height: 33vh;
+}
+
+.porfolio-box figure  a img {
+  width: 100%;
+}
+
+.porfolio-box figure .porfolio-description {
+  background-color: rgba(0, 0, 0, 0.853);
+  width: 100%;
+  padding: 1rem;
+  position: absolute;
+  bottom: 0;
+  color: var(--font-secondary-color);
+}
+
+/* .porfolio-box figure .porfolio-description h3 {
+} */
+
+/* .porfolio-description h3 { */
+  /* padding-bottom: 1rem; */
+/* } */
+
+.porfolio-box figure:hover .porfolio-description h3 {
+  padding-bottom: 0.5rem;
+}
+.porfolio-box figure .porfolio-description p {
+  display: none;
+}
+
+.porfolio-box:hover figure {
+  box-shadow: 0 0 10px 10px #f4f4f4;
+}
+
+.porfolio-box figure:hover .porfolio-description p {
+  display: block;
+}
+
+.porfolio-box:hover {
+  transform: scale(var(--scale-factor));
+}
+
+.larger-box {
+  flex-basis: 100%;
+}
+
+@media screen and (max-width: 992px) {
+  .porfolio-box {
+    flex: 0 0 50%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+
+  /* .porfolio {
+    width: 100%;
+  } */
+  .porfolio-box figure {
+  height: 40vh;
+  }
+  .porfolio-box {
+    flex: 1 0 100%;
+    padding: 1.5rem 0;
+  }
+}
+
 /* <--------------------------About Me---------------------------> */
 .about-me {
   display: flex;
