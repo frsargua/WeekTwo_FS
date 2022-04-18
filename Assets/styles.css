@@ -172,7 +172,7 @@ header {
 /* Makes div as the background image container and positions itself as absolute relative to the hero section */
 /* I had problems with the blur filter, hence i used this "HACK" */
 .hero .background {
-  background-image: url("./images/garduation-photo.jpg");
+  background-image: url("Images/garduation-photo.jpg");
   background-position: bottom 50% center;
   background-size: cover;
   position: absolute;
