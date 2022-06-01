@@ -311,7 +311,7 @@ header {
   height: 33vh;
 }
 
-.porfolio-box figure  a img {
+.porfolio-box figure a img {
   width: 100%;
 }
 
@@ -328,7 +328,7 @@ header {
 } */
 
 /* .porfolio-description h3 { */
-  /* padding-bottom: 1rem; */
+/* padding-bottom: 1rem; */
 /* } */
 
 .porfolio-box figure:hover .porfolio-description h3 {
@@ -361,12 +361,11 @@ header {
 }
 
 @media screen and (max-width: 768px) {
-
   /* .porfolio {
     width: 100%;
   } */
   .porfolio-box figure {
-  height: 40vh;
+    height: 40vh;
   }
   .porfolio-box {
     flex: 1 0 100%;
@@ -442,6 +441,19 @@ header {
   object-fit: cover;
 }
 
+/* External links  */
+.external-links-icons-group {
+  margin: auto;
+  width: fit-content;
+  padding-top: 3rem;
+}
+
+.external-links-icons-group > a {
+  padding: 0 3rem;
+  color: black;
+  font-size: 2rem;
+}
+
 @media screen and (max-width: 768px) {
   .about-me {
     width: 100%;
@@ -458,7 +470,8 @@ header {
   }
   .about-me-Container > .text {
     text-align: justify;
-    text-justify: inter-word;  }
+    text-justify: inter-word;
+  }
 
   .logo-group {
     justify-content: space-around;
@@ -488,6 +501,21 @@ header {
 .contact-me .contact-me-action h3 {
   font-size: 2rem;
   color: var(--font-secondary-color);
+}
+
+.form-container {
+  background-color: var(--background-primary);
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding-bottom: 2rem;
+}
+
+.form-container > a {
+  color: var(--font-secondary-color);
+  text-decoration: none;
+  padding: 0.5rem;
+  font-weight: bold;
 }
 
 /* I have reused the action-button class and added some changes using another class */
