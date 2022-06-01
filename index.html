@@ -6,143 +6,197 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="./Assets/styles.css" />
+    <script
+      src="https://kit.fontawesome.com/c6e9c752f1.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
+  <header>
+    <div class="navbar-container container">
+      <input type="checkbox" id="nav-toggler" class="nav-toggler" />
+      <label for="nav-toggler" class="nav-toggle-label">
+        <img
+          class="nav-logo"
+          src="./Assets/Images/avatar.png"
+          alt="Avatar of myself"
+        />
+      </label>
+      <nav class="navbar">
+        <ul>
+          <li><a class="navbar-links" href="#">Home</a></li>
+          <li><a class="navbar-links" href="#porfolio">Porfolio</a></li>
+          <li><a class="navbar-links" href="#about-me">About Me</a></li>
+          <li><a class="navbar-links" href="#contact-me">Contact Me</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
   <body>
-    <header>
-      <div class="navbar-container container">
-        <input type="checkbox" id="nav-toggler" class="nav-toggler" />
-        <label for="nav-toggler" class="nav-toggle-label">
-          <img
-            class="nav-logo"
-            src="./Assets/Images/avatar.png"
-            alt="Avatar of myself"
-          />
-        </label>
-        <nav class="navbar">
-          <ul>
-            <li><a class="navbar-links" href="#">Home</a></li>
-            <li><a class="navbar-links" href="#porfolio">Porfolio</a></li>
-            <li><a class="navbar-links" href="#about-me">About Me</a></li>
-            <li><a class="navbar-links" href="#contact-me">Contact Me</a></li>
-          </ul>
-        </nav>
-      </div>
-    </header>
-    <main>
-    <section class="hero block ">
-        <div class="background"></div>
-        <div class="hero-box-container container ">
-            <div class="hero-box hero-box-small hero-box-left ">
-                <h1>Hi there, I am</h1>
-            </div>
-            <div class="hero-box hero-box-large hero-box-right">
-                <h2>FABIAN SARANGO</h2>
-            </div>
-            <div class="hero-box hero-box-medium hero-box-right">
-                <h3>a full stack developer</h3>
-            </div>
+    <section class="hero block">
+      <div class="background"></div>
+      <div class="hero-box-container container">
+        <div class="hero-box hero-box-small hero-box-left">
+          <h1>Hi there, I am</h1>
         </div>
-      <div class="button-container"><a href="#porfolio" class="action-button">View My Work</a></div>
+        <div class="hero-box hero-box-large hero-box-right">
+          <h2>FABIAN SARANGO</h2>
+        </div>
+        <div class="hero-box hero-box-medium hero-box-right">
+          <h3>a full stack developer</h3>
+        </div>
+      </div>
+      <div class="button-container">
+        <a
+          href="./Assets/files/CV MAY 2022 Developer.pdf"
+          download="CV"
+          class="action-button"
+          >Dowload My CV</a
+        >
+      </div>
     </section>
     <section class="block container">
-        <div class="section-header smaller-padding">
-          <h2 class="header">Porfolio</h3>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tenetur obcaecati delectus repellendus deleniti
-              consectetur aperiam!</p>
+      <div class="section-header smaller-padding">
+        <h2 class="header">Porfolio</h2>
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tenetur
+          obcaecati delectus repellendus deleniti consectetur aperiam!
+        </p>
+      </div>
+
+      <div id="porfolio" class="porfolio">
+        <div class="porfolio-box larger-box">
+          <figure>
+            <a href="https://frsargua.github.io/WeekOne_FS/">
+              <img
+                src="./Assets/Images/projectOne.png"
+                alt="My first bootcamp assignment"
+              />
+            </a>
+
+            <div class="porfolio-description">
+              <h3>Refactor project</h3>
+              <p class="porfolio-description-text">
+                I improved the semantics of a website's HTML and removed DRY
+                properties from its CSS file.
+              </p>
+            </div>
+          </figure>
         </div>
 
-        <div id="porfolio" class="porfolio">
-          <div class="porfolio-box larger-box">
-            <figure>
-              <a href="https://frsargua.github.io/WeekOne_FS/">
-                <img src="./Assets/Images/projectOne.png" alt="My first bootcamp assignment">
-              </a>
+        <div class="porfolio-box">
+          <figure>
+            <img src="./Assets/Images/calculator.jpg" alt="Calculator image" />
+            <div class="porfolio-description">
+              <h3>Porfolio box</h3>
+              <p class="porfolio-description-text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo,
+                et.
+              </p>
+            </div>
+          </figure>
+        </div>
 
-              <div class="porfolio-description">
-                <h3>Refactor project</h3>
-                <p class="porfolio-description-text">I improved the semantics of a website's HTML and removed DRY
-                  properties from its CSS file.</p>
-              </div>
-            </figure>
-          </div>
+        <div class="porfolio-box">
+          <figure>
+            <img src="./Assets/Images/calculator.jpg" alt="Calculator image" />
+            <div class="porfolio-description">
+              <h3>Porfolio box</h3>
+              <p class="porfolio-description-text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo,
+                et.
+              </p>
+            </div>
+          </figure>
+        </div>
 
-          <div class="porfolio-box">
-            <figure>
-              <img src="./Assets/Images/calculator.jpg" alt="Calculator image">
-              <div class="porfolio-description">
-                <h3>Porfolio box</h3>
-                <p class="porfolio-description-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, et.
-                </p>
-              </div>
-            </figure>
+        <div class="porfolio-box">
+          <figure>
+            <img src="./Assets/Images/calculator.jpg" alt="Calculator image" />
+            <div class="porfolio-description">
+              <h3>Porfolio box</h3>
+              <p class="porfolio-description-text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo,
+                et.
+              </p>
+            </div>
+          </figure>
+        </div>
+      </div>
+    </section>
+    <section class="block container">
+      <div class="section-header">
+        <h2 class="header">A little about me</h2>
+      </div>
+      <div id="about-me" class="about-me">
+        <div class="about-me-Container">
+          <div class="about-me-photo">
+            <img
+              src="./Assets/Images/photo-of-me.png"
+              alt="driving licence like photo of me"
+            />
           </div>
-
-          <div class="porfolio-box">
-            <figure>
-              <img src="./Assets/Images/calculator.jpg" alt="Calculator image">
-              <div class="porfolio-description">
-                <h3>Porfolio box</h3>
-                <p class="porfolio-description-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, et.
-                </p>
-              </div>
-            </figure>
-          </div>
-          
-          <div class="porfolio-box">
-            <figure>
-              <img src="./Assets/Images/calculator.jpg" alt="Calculator image">
-              <div class="porfolio-description">
-                <h3>Porfolio box</h3>
-                <p class="porfolio-description-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, et.
-                </p>
-              </div>
-            </figure>
+          <div class="text">
+            I am a chemistry masters graduate, with experience in tutoring,
+            customer service and hospitality, who is passionate about Web
+            Development. Tutoring for over 4 years has allowed me to become
+            clear and efficient when explaining complex ideas by utilising
+            metaphors and diagrams when teaching small groups of students either
+            in person or online, which has prove very effective. Additionally,
+            working in hospitality has given me the opportunity to improve my
+            customer engagement and interact in a more friendly conversational
+            in turn allowing me to get to know each customer while remaining
+            professional in a demanding environment.
           </div>
         </div>
-      </section>
-      <section class="block container">
-        <div class="section-header">
-          <h2 class="header">A little about me</h2>
-        </div>
-        <div id="about-me" class="about-me">
-          <div class="about-me-Container">
-            <div class="about-me-photo"><img src="./Assets/Images/photo-of-me.png" alt="driving licence like photo of me" /></div>
-            <div class="text">
-              
-                I am a chemistry masters graduate, with experience in tutoring, customer service and hospitality,
-                who is passionate about Web Development. Tutoring for over 4 years has allowed me to become clear
-                and efficient when explaining complex ideas by utilising metaphors and diagrams when teaching small
-                groups of students either in person or online, which has prove very effective. Additionally,
-                working in hospitality has given me the opportunity to improve my customer engagement and interact
-                in a more friendly conversational in turn allowing me to get to know each customer while remaining
-                professional in a demanding environment.
-  
-            
+
+        <div class="about-me-technologies">
+          <h3>Technologies</h3>
+          <div class="logo-group">
+            <div class="logo-container">
+              <img
+                class="logo-img"
+                src="./Assets/Images/javascript.png"
+                alt="javascript logo"
+              />
+            </div>
+            <div class="logo-container">
+              <img
+                class="logo-img"
+                src="Assets/Images/html5-logo.png"
+                alt="html5 logo"
+              />
+            </div>
+            <div class="logo-container">
+              <img
+                class="logo-img"
+                src="Assets/Images/css3.jpg"
+                alt="css3 logo"
+              />
             </div>
           </div>
-  
-          <div class="about-me-technologies">
-            <h3>Technologies</h3>
-            <div class="logo-group">
-              <div class="logo-container">
-                <img class="logo-img" src="./Assets/Images/javascript.png" alt="javascript logo" />
-              </div>
-              <div class="logo-container">
-                <img class="logo-img" src="Assets/Images/html5-logo.png" alt="html5 logo" />
-              </div>
-              <div class="logo-container">
-                <img class="logo-img" src="Assets/Images/css3.jpg" alt="css3 logo" />
-              </div>
-            </div>
+          <div class="external-links-icons-group">
+            <a href="https://github.com/frsargua" class="logo-container"
+              ><i class="fa-brands fa-github-square"></i
+            ></a>
+            <a href="https://github.com/frsargua" class="logo-container">
+              <i class="fa-brands fa-linkedin"></i>
+            </a>
           </div>
         </div>
-      </section>
-      <section id="contact-me" class="contact-me">
-        <div class="contact-me-action">
-          <h3>Ready to hire me?</h3>
-            <a href="#" class="action-button contact-me-action-button">Contact me now</a>
-        </div>
-      </section>
-</main>
+      </div>
+    </section>
+    <section id="contact-me" class="contact-me">
+      <div class="contact-me-action">
+        <h3>Ready to hire me?</h3>
+        <button href="#" class="action-button contact-me-action-button"></button>
+          Contact me now
+        </button>
+      </div>
+      <div class="form-container">
+        <a href="">frsargua@gmail.com</a>
+        <a href="">Phone number 07542351359</a>
+      </div>
+    </section>
+    <script src=""></script>
   </body>
 </html>
