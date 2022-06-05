@@ -385,7 +385,7 @@ header {
 }
 /* Makes box larger when hovered */
 .about-me:hover {
-  transform: scale(1.01);
+  transform: scale(1.005);
 }
 
 /* Makes containers be spaced to each end in a row. */
@@ -449,9 +449,9 @@ header {
 }
 
 .external-links-icons-group > a {
-  padding: 0 3rem;
+  padding: 0 1rem;
   color: black;
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 
 @media screen and (max-width: 768px) {
@@ -505,7 +505,7 @@ header {
 
 .form-container {
   background-color: var(--background-primary);
-  display: flex;
+  display: none;
   flex-direction: column;
   text-align: center;
   padding-bottom: 2rem;
@@ -525,7 +525,7 @@ header {
   font-weight: bold;
 }
 
-.contact-me-action > a:hover {
+.contact-me-action > button:hover {
   transform: scale(var(--scale-factor));
 }
 
