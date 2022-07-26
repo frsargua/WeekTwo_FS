@@ -11,7 +11,7 @@
   --border-radius: 5px;
   --box-shadow-color: #f3f3f3;
   /* Transition */
-  --scale-factor: 1.03;
+  --scale-factor: 1.05;
 }
 
 * {
@@ -468,6 +468,9 @@ header {
   flex: 0 0 5%;
   border-radius: 50%;
   overflow: hidden;
+}
+.logo-container:hover {
+  transform: scale(var(--scale-factor));
 }
 .logo-group .logo-container .logo-img {
   width: 100%;
