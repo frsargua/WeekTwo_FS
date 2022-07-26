@@ -1,16 +1,8 @@
-const detailsButtonEL = document.getElementById("contact-me-button");
-const formContainerEl = document.getElementById("form-container");
-
-let verifier = false;
-detailsButtonEL.addEventListener("click", function (event) {
-  verifier == false ? open() : close();
+$(window).scroll(function () {
+  let scroll = $(window).scrollTop();
+  if (scroll >= $("#porfolio").offset().top) {
+    $("body").css("background-color", "black");
+  } else {
+    $("body").fadeIn().css("background-color", "white");
+  }
 });
-
-const open = () => {
-  formContainerEl.style.display = "flex";
-  verifier = true;
-};
-const close = () => {
-  formContainerEl.style.display = "none";
-  verifier = false;
-};

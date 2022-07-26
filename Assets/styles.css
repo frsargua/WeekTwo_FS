@@ -25,6 +25,7 @@ body {
   font-family: Inter, Arial, Helvetica, sans-serif;
   overflow-x: hidden;
   /* background-color: var(--background-primary); */
+  transition: all 650ms ease-in-out;
 }
 
 h2 {
