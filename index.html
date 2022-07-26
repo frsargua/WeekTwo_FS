@@ -7,6 +7,14 @@
     <title>Document</title>
     <link rel="stylesheet" href="./Assets/styles.css" />
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <!-- CSS only -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
+      crossorigin="anonymous"
+    />
+
     <script
       src="https://kit.fontawesome.com/c6e9c752f1.js"
       crossorigin="anonymous"
@@ -167,15 +175,6 @@
           />
         </div>
       </div>
-
-      <div class="external-links-icons-group">
-        <a href="https://github.com/frsargua" class="logo-container"
-          ><i class="fa-brands fa-github-square"></i
-        ></a>
-        <a href="https://github.com/frsargua" class="logo-container">
-          <i class="fa-brands fa-linkedin"></i>
-        </a>
-      </div>
     </div>
 
     <section class="block container">
@@ -186,9 +185,9 @@
       <div id="porfolio" class="porfolio">
         <div data-aos="fade-left" class="porfolio-box larger-box">
           <figure>
-            <a href="https://ramielsayed.github.io/film-go/">
+            <a href="https://radiant-bayou-46133.herokuapp.com/">
               <img
-                src="./Assets/Images/Screenshot 2022-06-01 at 17.40.54.png"
+                src="./Assets/Images/stayHaven.png"
                 alt="My first bootcamp assignment"
               />
             </a>
@@ -274,21 +273,67 @@
       </div>
     </section>
 
-    <section id="contact-me" class="contact-me">
-      <div class="contact-me-action">
-        <h3>Ready to hire me?</h3>
-        <button
-          id="contact-me-button"
-          class="action-button contact-me-action-button"
-        >
-          Contact me now!
-        </button>
-      </div>
-      <div id="form-container" class="form-container">
-        <a href="mailto: frsargua@gmail.com">Email Me</a>
-        <a href="tel:07542351359">Phone me!</a>
-      </div>
+    <section data-aos="zoom-in" data-aos-duration="600" class="form container">
+      <h3 class="text-center">Contact me!</h3>
+      <form class="mb-3 col-6 mx-auto">
+        <div class="mb-3">
+          <label for="exampleFormControlInput1" class="form-label">Name</label>
+          <input
+            type="email"
+            class="form-control"
+            id="exampleFormControlInput1"
+            placeholder="Full Name"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="exampleFormControlInput1" class="form-label"
+            >Email address</label
+          >
+          <input
+            type="email"
+            class="form-control"
+            id="exampleFormControlInput1"
+            placeholder="name@example.com"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="exampleFormControlTextarea1" class="form-label"
+            >Example textarea</label
+          >
+          <textarea
+            class="form-control"
+            id="exampleFormControlTextarea1"
+            rows="3"
+            placeholder="Ask me anything"
+          ></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
     </section>
+
+    <footer id="contact-me" class="contact-me">
+      <div class="contact-me-action">
+        <a href="https://github.com/frsargua" class="logo-container"
+          ><i class="fa-brands fa-github-square"></i
+        ></a>
+        <a href="https://github.com/frsargua" class="logo-container">
+          <i class="fa-brands fa-linkedin"></i>
+        </a>
+        <a href="https://github.com/frsargua" class="logo-container">
+          <i class="fa-solid fa-phone"></i>
+        </a>
+        <a href="https://github.com/frsargua" class="logo-container">
+          <i class="fa-solid fa-envelope"></i>
+        </a>
+      </div>
+    </footer>
+    <!-- JavaScript Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+      crossorigin="anonymous"
+    ></script>
+
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
       AOS.init();

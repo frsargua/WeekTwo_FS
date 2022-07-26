@@ -24,6 +24,7 @@ body {
   color: var(--font-primary-color);
   font-family: Inter, Arial, Helvetica, sans-serif;
   overflow-x: hidden;
+  /* background-color: var(--background-primary); */
 }
 
 h2 {
@@ -521,17 +522,17 @@ header {
 
 .contact-me .contact-me-action {
   background-color: var(--background-primary);
-  height: 10vh;
+  height: 5vh;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   width: 100%;
   padding: 0 2rem;
 }
 
-.contact-me .contact-me-action h3 {
-  font-size: 2rem;
+.contact-me .contact-me-action a {
+  font-size: 1.7rem;
   color: var(--font-secondary-color);
 }
 
@@ -563,7 +564,7 @@ header {
 
 @media screen and (max-width: 768px) {
   .contact-me .contact-me-action {
-    flex-direction: column;
+    flex-direction: row;
     justify-content: space-evenly;
     height: 20vh;
     text-align: center;
