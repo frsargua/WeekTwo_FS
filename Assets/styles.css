@@ -575,3 +575,12 @@ header {
     text-align: center;
   }
 }
+
+.custom-card {
+  box-shadow: 10px 15px 0 0 var(--background-secondary);
+  transition: all 700ms ease-in-out;
+}
+
+.custom-card:hover {
+  box-shadow: 5px 5px 0 0 var(--background-secondary);
+}
