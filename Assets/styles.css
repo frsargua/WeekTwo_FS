@@ -23,6 +23,7 @@
 body {
   color: var(--font-primary-color);
   font-family: Inter, Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
 }
 
 h2 {
@@ -290,6 +291,35 @@ header {
 }
 
 /* <--------------------------Porfolio Section---------------------------> */
+
+.parent-container {
+  position: relative;
+  text-align: center;
+}
+.header-decoration {
+  background-color: white;
+  width: fit-content;
+  margin: auto;
+}
+
+.header-decoration::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -50vw;
+  width: 2000px;
+  border-bottom: calc(0.2px + 0.05em) solid red;
+  z-index: -1;
+}
+.header-decoration::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 2000px;
+  border-bottom: calc(0.2px + 0.05em) solid red;
+  z-index: -1;
+}
 
 .porfolio {
   display: flex;
