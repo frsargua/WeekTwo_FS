@@ -92,6 +92,7 @@ header {
 /* Keeps a links separated, so they do not stick side by side */
 .navbar > ul > li {
   padding: 1rem 2rem;
+  list-style: none;
 }
 
 /* Removes a tag decoration  */
