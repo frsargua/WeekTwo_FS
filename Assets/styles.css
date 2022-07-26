@@ -56,6 +56,7 @@ header {
   position: fixed;
   width: 100%;
   z-index: 99;
+  height: 55px;
 }
 
 /* This makes the navlogo and the a tag links be push to separate ends in a row (for desktop)*/
@@ -79,19 +80,21 @@ header {
 /* Max height of 0 allows makes the navbar non visible when the check box is not clicked */
 .navbar-container .navbar {
   background-color: var(--background-primary);
-  max-height: 0;
+  max-height: 100%;
   transition: all 0s ease;
+  padding: 0;
 }
 
 /* Desktop - makes links be in a row */
 .navbar ul {
   display: flex;
   flex-direction: row;
+  margin: 0;
 }
 
 /* Keeps a links separated, so they do not stick side by side */
 .navbar > ul > li {
-  padding: 1rem 2rem;
+  padding: 0.9rem 2rem;
   list-style: none;
 }
 
@@ -118,6 +121,10 @@ header {
   .navbar-container {
     flex-direction: column;
     align-items: center;
+  }
+
+  .navbar-container .navbar {
+    max-height: 0px;
   }
 
   /* Makes nav-bar li be in a column wit the text to the left */
