@@ -536,6 +536,10 @@ header {
   color: var(--font-secondary-color);
 }
 
+.form {
+  height: 70vh;
+}
+
 .form-container {
   background-color: var(--background-primary);
   display: none;
