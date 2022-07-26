@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="./Assets/styles.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <script
       src="https://kit.fontawesome.com/c6e9c752f1.js"
       crossorigin="anonymous"
@@ -57,14 +58,10 @@
     <section class="block container">
       <div class="section-header smaller-padding">
         <h2 class="header">Porfolio</h2>
-        <p>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tenetur
-          obcaecati delectus repellendus deleniti consectetur aperiam!
-        </p>
       </div>
 
       <div id="porfolio" class="porfolio">
-        <div class="porfolio-box larger-box">
+        <div data-aos="fade-left" class="porfolio-box larger-box">
           <figure>
             <a href="https://ramielsayed.github.io/film-go/">
               <img
@@ -82,7 +79,7 @@
           </figure>
         </div>
 
-        <div class="porfolio-box larger-box">
+        <div data-aos="fade-right" class="porfolio-box larger-box">
           <figure>
             <a href="https://ramielsayed.github.io/film-go/">
               <img
@@ -100,7 +97,7 @@
           </figure>
         </div>
 
-        <div class="porfolio-box">
+        <div data-aos="fade-right" class="porfolio-box">
           <figure>
             <a href="https://github.com/frsargua/week10-HW"
               ><img
@@ -113,7 +110,7 @@
             </div>
           </figure>
         </div>
-        <div class="porfolio-box">
+        <div data-aos="fade-left" class="porfolio-box">
           <figure>
             <a href="https://frsargua.github.io/WeekSix_FS/"
               ><img
@@ -127,7 +124,7 @@
           </figure>
         </div>
 
-        <div class="porfolio-box">
+        <div data-aos="fade-right" class="porfolio-box">
           <figure>
             <a href="https://frsargua.github.io/WeekFourHW_FS/"
               ><img src="./Assets/Images/quizz-app.png" alt="Calculator image"
@@ -138,7 +135,7 @@
             </div>
           </figure>
         </div>
-        <div class="porfolio-box">
+        <div data-aos="fade-left" class="porfolio-box">
           <figure>
             <a href="https://frsargua.github.io/WeekFive_FS/"
               ><img
@@ -230,6 +227,10 @@
         <a href="tel:07542351359">Phone me!</a>
       </div>
     </section>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
     <script src="./Assets/index.js"></script>
   </body>
 </html>
