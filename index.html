@@ -280,15 +280,20 @@
     >
       <div class="d-flex flex-column col-12">
         <h3 class="text-center">Contact me!</h3>
-        <form class="mb-3 col-6 mx-auto">
+        <form
+          action="https://formspree.io/f/xgedgbow"
+          method="post"
+          class="mb-3 col-6 mx-auto"
+        >
           <div class="mb-3">
             <label for="exampleFormControlInput1" class="form-label"
               >Name</label
             >
             <input
-              type="email"
+              type="text"
               class="form-control"
               id="exampleFormControlInput1"
+              name="name"
               placeholder="Full Name"
             />
           </div>
@@ -299,6 +304,7 @@
             <input
               type="email"
               class="form-control"
+              name="email"
               id="exampleFormControlInput1"
               placeholder="name@example.com"
             />
@@ -311,6 +317,7 @@
               class="form-control"
               id="exampleFormControlTextarea1"
               rows="3"
+              name="message"
               placeholder="Ask me anything"
             ></textarea>
           </div>
