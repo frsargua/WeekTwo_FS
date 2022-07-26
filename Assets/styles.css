@@ -308,7 +308,7 @@ header {
   top: 50%;
   left: -50vw;
   width: 2000px;
-  border-bottom: calc(0.2px + 0.05em) solid red;
+  border-bottom: calc(0.2px + 0.08em) solid var(--background-primary);
   z-index: -1;
 }
 .header-decoration::after {
@@ -317,7 +317,7 @@ header {
   top: 50%;
   left: 50%;
   width: 2000px;
-  border-bottom: calc(0.2px + 0.05em) solid red;
+  border-bottom: calc(0.2px + 0.08em) solid var(--background-primary);
   z-index: -1;
 }
 
@@ -407,9 +407,8 @@ header {
 .about-me {
   display: flex;
   flex-direction: column;
-  width: 90%;
   margin: auto;
-  box-shadow: 0 0 20px 10px var(--box-shadow-color);
+  /* box-shadow: 0 0 20px 10px var(--box-shadow-color); */
   border-radius: 10px;
   padding: 2rem;
 }
@@ -435,7 +434,7 @@ header {
 
 /* Makes image take 25% of the width of the parent container */
 .about-me-Container .about-me-photo {
-  flex: 0 0 25%;
+  flex: 0 0 35%;
   border-radius: 50%;
   box-shadow: 0 0 5px 1px var(--box-shadow-color);
   overflow: hidden;
@@ -446,7 +445,7 @@ header {
 }
 
 .about-me-Container > .text {
-  flex: 0 0 70%;
+  flex: 0 0 60%;
   width: 100%;
 }
 
@@ -456,12 +455,15 @@ header {
   padding-bottom: 1.5rem;
 }
 .logo-group {
+  width: 100vw;
+  left: 0;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
 }
+
 .logo-group .logo-container {
-  flex: 0 0 10%;
+  flex: 0 0 5%;
   border-radius: 50%;
   overflow: hidden;
 }
