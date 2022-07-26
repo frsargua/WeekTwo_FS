@@ -55,7 +55,7 @@ header {
   padding: 0 1rem;
   position: fixed;
   width: 100%;
-  z-index: 999;
+  z-index: 99;
 }
 
 /* This makes the navlogo and the a tag links be push to separate ends in a row (for desktop)*/
@@ -583,4 +583,11 @@ header {
 
 .custom-card:hover {
   box-shadow: 5px 5px 0 0 var(--background-secondary);
+}
+
+footer {
+  position: fixed;
+  bottom: 0%;
+  width: 100%;
+  z-index: 999;
 }
