@@ -611,6 +611,7 @@ header {
 .custom-height-800 {
   max-height: 450px;
   max-width: 1150px;
+  position: relative;
 }
 
 .custom-img-width {
@@ -621,6 +622,13 @@ header {
 
 .height-100vh {
   height: 100vh;
+}
+
+.closing-icon-description-card {
+  position: absolute;
+  top: -25px;
+  right: -15px;
+  font-size: 3rem;
 }
 
 footer {
@@ -638,8 +646,7 @@ footer {
 
 @media screen and (max-width: 975px) {
   .card-description {
-    height: fit-content;
-    overflow: auto;
+    height: 250px;
   }
   .custom-height-800 {
     max-height: fit-content;
