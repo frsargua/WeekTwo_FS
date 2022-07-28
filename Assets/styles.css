@@ -631,6 +631,18 @@ header {
   font-size: 3rem;
 }
 
+.pop-up-card {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  height: 0;
+  left: 0;
+  right: 0;
+  z-index: 3;
+  overflow: hidden;
+  background-color: rgba(67, 67, 67, 0.779);
+}
+
 footer {
   position: fixed;
   opacity: 0.9;
