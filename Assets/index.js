@@ -1,11 +1,11 @@
-// $(window).scroll(function () {
-//   let scroll = $(window).scrollTop();
-//   if (scroll >= $("#porfolio").offset().top) {
-//     $("body").css("background-color", "black");
-//   } else {
-//     $("body").fadeIn().css("background-color", "white");
-//   }
-// });
+$(window).scroll(function () {
+  let scroll = $(window).scrollTop();
+  if (scroll >= $("#porfolio").offset().top) {
+    $("body").css("background-color", "black");
+  } else {
+    $("body").fadeIn().css("background-color", "white");
+  }
+});
 
 let closingIconEl = $("#closing-icon-description-card");
 let openingTag = $("#card-One");
