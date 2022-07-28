@@ -1,0 +1,61 @@
+{{#each largeProjects}}
+  <div>
+    <div data-aos="fade-left" class="porfolio-box larger-box card-One">
+      <figure>
+        <a id="card-One" class="">
+          <i class="fa-solid fa-computer-mouse click-me-icon"> Click Me</i>
+          <img src="{{imageUrl}}" alt="My first bootcamp assignment" />
+        </a>
+
+        <div class="porfolio-description">
+          <h3>{{title}}</h3>
+          <p class="porfolio-description-text">
+            {{description}}
+          </p>
+        </div>
+      </figure>
+    </div>
+
+    <div id="card-One-Open" class="d-flex align-items-center pop-up-card">
+      <div
+        class="d-flex flex-column flex-lg-row align-items-center col-11 col-md-8 col-lg-9 mx-auto border border-white custom-height-800 bg-white rounded-3"
+      >
+        <i
+          id="closing-icon-description-card"
+          class="fa-solid fa-xmark closing-icon-description-card"
+        ></i>
+        <div class="col-12 col-lg-7 p-1">
+          <img class="rounded-2 custom-img-width" src="{{imageUrl}}" alt="" />
+        </div>
+        <div
+          class="col-12 col-lg-5 p-3 d-flex flex-column justify-content-evenly"
+        >
+          <h2>StayHaven</h2>
+          <div class="d-flex flex-wrap">
+            <span class="custom-tags">HTML</span>
+            <span class="custom-tags">CSS</span>
+            <span class="custom-tags">JavaScript</span>
+            <span class="custom-tags">MySQL</span>
+            <span class="custom-tags">UI/UX</span>
+          </div>
+          <h3 class="mt-4 mb-2">About</h3>
+          <div class="card-description">
+            <p>
+              {{description}}
+            </p>
+          </div>
+          <div class="d-flex justify-content-around mt-4">
+            <a
+              class="card bg-primary p-1 text-white px-3"
+              href="{{repoUrl}}"
+            >Repository</a>
+            <a
+              class="card bg-primary p-1 text-white px-3"
+              href="{{repoUrl}}"
+            >Deployed</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{{/each}}
