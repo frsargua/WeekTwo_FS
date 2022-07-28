@@ -379,7 +379,7 @@ header {
 }
 
 .porfolio-box:hover figure {
-  box-shadow: 0 0 10px 10px #f4f4f4;
+  box-shadow: 0 0 10px 7px #c0c0c0bc;
 }
 
 .porfolio-box figure:hover .porfolio-description p {
@@ -625,10 +625,18 @@ header {
 }
 
 .closing-icon-description-card {
+  background-color: rgb(255, 255, 255);
+  border: 2px solid black;
+  padding: 0 0.6rem;
+  border-radius: 25px;
   position: absolute;
   top: -25px;
   right: -15px;
   font-size: 3rem;
+}
+.closing-icon-description-card:hover {
+  color: rgb(255, 80, 67);
+  transform: scale(var(--scale-factor));
 }
 
 .pop-up-card {
