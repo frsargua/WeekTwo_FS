@@ -8,7 +8,17 @@
 // });
 
 let closingIconEl = $("#closing-icon-description-card");
+let openingTag = $("#card-One");
 
 closingIconEl.click(function () {
-  $(this).parent().parent().removeClass("d-flex").addClass("d-none");
+  $(this).parent().parent().css({ height: "0vh" });
+  $("html").css({
+    overflow: "auto",
+  });
+});
+openingTag.click(function () {
+  $("#card-One-Open").css({ height: "100vh", transition: "all 400ms" });
+  $("html").css({
+    overflow: "hidden",
+  });
 });
