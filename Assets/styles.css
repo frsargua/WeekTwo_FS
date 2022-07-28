@@ -624,6 +624,40 @@ header {
   height: 100vh;
 }
 
+.click-me-icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 2;
+  background-color: rgb(242, 234, 250);
+  font-size: 1rem;
+  padding: 0.7rem;
+  border-bottom-left-radius: 10px;
+  animation: color-change 5s infinite;
+}
+
+@keyframes color-change {
+  0% {
+    color: #ed4264;
+  }
+
+  20% {
+    color: purple;
+  }
+  40% {
+    color: blue;
+  }
+  60% {
+    color: #ffc371;
+  }
+  80% {
+    color: #ffa571;
+  }
+  100% {
+    color: #ed4264;
+  }
+}
+
 .closing-icon-description-card {
   background-color: rgb(255, 255, 255);
   border: 2px solid black;
