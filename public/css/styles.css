@@ -641,6 +641,7 @@ header {
   padding: 0.7rem;
   border-bottom-left-radius: 10px;
   animation: color-change 5s infinite;
+  pointer-events: none;
 }
 
 @keyframes color-change {

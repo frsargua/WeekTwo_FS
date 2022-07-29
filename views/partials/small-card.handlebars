@@ -1,17 +1,18 @@
 {{#each smallProjects}}
 
-  <div
-    data-aos="fade-right"
-    class="porfolio-box card-One"
-    identifier="S{{@index}}"
-  >
+  <div data-aos="fade-right" class="porfolio-box">
     <figure>
       <a>
         <i class="fa-solid fa-computer-mouse click-me-icon"> Click Me</i>
 
-        <img src="{{imageUrl}}" alt="Calculator image" /></a>
+        <img
+          src="{{imageUrl}}"
+          alt="Calculator image"
+          class="card-One"
+          identifier="S{{@index}}"
+        /></a>
       <div class="porfolio-description">
-        <div class="d-flex justify-content-between">
+        <div class="d-flex justify-content-between" style="z-index: 999;">
           <h3>{{title}}</h3>
           <div class="d-flex justify-content-between align-items-center">
             <a

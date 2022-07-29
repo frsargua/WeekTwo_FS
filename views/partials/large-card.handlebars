@@ -2,17 +2,23 @@
 
   <div
     data-aos="fade-left"
-    class="porfolio-box larger-box card-One"
-    identifier="L{{@index}}"
+    class="porfolio-box larger-box"
+    {{!-- identifier="L{{@index}}" --}}
   >
     <figure>
       <a id="card-One" class="">
-        <i class="fa-solid fa-computer-mouse click-me-icon"> Click Me</i>
-        <img src="{{imageUrl}}" alt="My first bootcamp assignment" />
+        <i class="fa-solid fa-computer-mouse click-me-icon">
+          Click Me</i>
+        <img
+          src="{{imageUrl}}"
+          class="card-One"
+          identifier="L{{@index}}"
+          alt="My first bootcamp assignment"
+        />
       </a>
 
       <div class="porfolio-description">
-        <div class="d-flex justify-content-between">
+        <div class="d-flex justify-content-between" style="z-index: 999;">
           <h3>{{title}}</h3>
           <div class="d-flex justify-content-between align-items-center">
             <a
