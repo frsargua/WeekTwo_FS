@@ -135,6 +135,8 @@ header {
   .navbar ul {
     flex-direction: column;
     text-align: left;
+    height: 0;
+    overflow: hidden;
   }
 
   /* Adding padding to the li */
@@ -154,6 +156,10 @@ header {
   .nav-toggler:checked ~ .navbar {
     max-height: 100%;
     transition: all 2s ease;
+  }
+
+  .nav-toggler:checked ~ .navbar ul {
+    height: auto;
   }
 
   /* Adds border underneath each li element */
