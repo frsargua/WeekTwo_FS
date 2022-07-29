@@ -1,15 +1,25 @@
-<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="./Assets/styles.css" />
+    <link rel="stylesheet" href="./public/css/styles.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <!-- CSS only -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
+      crossorigin="anonymous"
+    />
+
     <script
       src="https://kit.fontawesome.com/c6e9c752f1.js"
       crossorigin="anonymous"
     ></script>
+    <link rel="stylesheet" type="text/css" href="slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
   </head>
   <header>
     <div class="navbar-container container">
@@ -17,7 +27,7 @@
       <label for="nav-toggler" class="nav-toggle-label">
         <img
           class="nav-logo"
-          src="./Assets/Images/avatar.png"
+          src="./public/Images/avatar.png"
           alt="Avatar of myself"
         />
       </label>
@@ -47,7 +57,7 @@
       </div>
       <div class="button-container">
         <a
-          href="./Assets/files/CV MAY 2022 Developer.pdf"
+          href="./files/CV Fabian Sarango.pdf"
           download="CV"
           class="action-button"
           >Dowload My CV</a
@@ -55,150 +65,775 @@
       </div>
     </section>
     <section class="block container">
-      <div class="section-header smaller-padding">
-        <h2 class="header">Porfolio</h2>
-        <p>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tenetur
-          obcaecati delectus repellendus deleniti consectetur aperiam!
-        </p>
-      </div>
-
-      <div id="porfolio" class="porfolio">
-        <div class="porfolio-box larger-box">
-          <figure>
-            <a href="https://ramielsayed.github.io/film-go/">
-              <img
-                src="./Assets/Images/Screenshot 2022-06-01 at 17.40.54.png"
-                alt="My first bootcamp assignment"
-              />
-            </a>
-
-            <div class="porfolio-description">
-              <h3>FilmGo - Project 1</h3>
-              <p class="porfolio-description-text">
-                This is a movie aggregator website.
-              </p>
-            </div>
-          </figure>
-        </div>
-
-        <div class="porfolio-box">
-          <figure>
-            <a href="https://frsargua.github.io/WeekSix_FS/"
-              ><img
-                src="./Assets/Images/wheather-app.png"
-                alt="Calculator image"
-            /></a>
-            <div class="porfolio-description">
-              <h3>Weather app</h3>
-              <p class="porfolio-description-text"></p>
-            </div>
-          </figure>
-        </div>
-
-        <div class="porfolio-box">
-          <figure>
-            <a href="https://frsargua.github.io/WeekFourHW_FS/"
-              ><img src="./Assets/Images/quizz-app.png" alt="Calculator image"
-            /></a>
-            <div class="porfolio-description">
-              <h3>Quiz App</h3>
-              <p class="porfolio-description-text"></p>
-            </div>
-          </figure>
-        </div>
-        <div class="porfolio-box">
-          <figure>
-            <a href="https://frsargua.github.io/WeekFive_FS/"
-              ><img
-                src="./Assets/Images/Scheduler-app.png"
-                alt="Calculator image"
-            /></a>
-            <div class="porfolio-description">
-              <h3>Scheduler App</h3>
-              <p class="porfolio-description-text"></p>
-            </div>
-          </figure>
-        </div>
-      </div>
-    </section>
-    <section class="block container">
-      <div class="section-header">
-        <h2 class="header">A little about me</h2>
+      <div class="text-center">
+        <h2 class="display-2">A little about me</h2>
       </div>
       <div id="about-me" class="about-me">
         <div class="about-me-Container">
           <div class="about-me-photo">
             <img
-              src="./Assets/Images/photo-of-me.png"
+              src="./public/Images/photo-of-me.png"
               alt="driving licence like photo of me"
             />
           </div>
           <div class="text">
-            I am a chemistry masters graduate, with experience in tutoring,
-            customer service and hospitality, who is passionate about Web
-            Development. Tutoring for over 4 years has allowed me to become
-            clear and efficient when explaining complex ideas by utilising
-            metaphors and diagrams when teaching small groups of students either
-            in person or online, which has prove very effective. Additionally,
-            working in hospitality has given me the opportunity to improve my
-            customer engagement and interact in a more friendly conversational
-            in turn allowing me to get to know each customer while remaining
-            professional in a demanding environment.
+            <p>
+              A full-stack web developer majored in Chemistry. Having achieved a
+              full-stack certificate from the University of Birmingham Coding
+              Bootcamp. Adaptable and logic driven problem solver, with strong
+              communication skills and experience working in collaboration or
+              independently. In addition, to being a strong problem solver
+              thanks to my STEM degree, which allowed me to be a fast learner.
+            </p>
+            <div>
+              <h2>Skills</h2>
+              <ul>
+                <li>
+                  LANGUAGES:
+                  <ul>
+                    <li>HTML5, CSS3, JavaScript</li>
+                  </ul>
+                </li>
+                <li>
+                  FRAMEWORKS:
+                  <ul>
+                    <li>React, jQuery, Bootstrap, UIKit, Express.js</li>
+                  </ul>
+                </li>
+                <li>
+                  DATABASES:
+                  <ul>
+                    <li>MySQL, Sequelize, MongoDB, Mongoose, IndexedDB</li>
+                  </ul>
+                </li>
+                <li>
+                  OTHER:
+                  <ul>
+                    <li>Node.js, Git, Heroku, Handlebars.js</li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="about-me-technologies">
+      <div class="logo-group">
+        <div class="logo-container">
+          <img
+            class="logo-img"
+            src="./public/Images/javascript.png"
+            alt="javascript logo"
+          />
+        </div>
+        <div class="logo-container">
+          <img
+            class="logo-img"
+            src="./public/Images/html5-logo.png"
+            alt="html5 logo"
+          />
+        </div>
+        <div class="logo-container">
+          <img
+            class="logo-img"
+            src="./public/Images/css3.jpg"
+            alt="css3 logo"
+          />
+        </div>
+        <div class="logo-container">
+          <img
+            class="logo-img"
+            src="./public/Images/mysql.png"
+            alt="javascript logo"
+          />
+        </div>
+        <div class="logo-container">
+          <img
+            class="logo-img"
+            src="./public/Images/sequelize-logo.png"
+            alt="html5 logo"
+          />
+        </div>
+        <div class="logo-container">
+          <img
+            class="logo-img"
+            src="./public/Images/mongo-icon.png"
+            alt="css3 logo"
+          />
+        </div>
+        <div class="logo-container">
+          <img
+            class="logo-img"
+            src="./public/Images/bootstrap-social-logo.png"
+            alt="javascript logo"
+          />
+        </div>
+        <div class="logo-container">
+          <img
+            class="logo-img"
+            src="./public/Images/bulma-icon.png"
+            alt="html5 logo"
+          />
+        </div>
+        <div class="logo-container">
+          <img
+            class="logo-img"
+            src="./public/Images/jquery-icon.jpg"
+            alt="css3 logo"
+          />
+        </div>
+        <div class="logo-container">
+          <img
+            class="logo-img"
+            src="./public/Images/express..png"
+            alt="css3 logo"
+          />
+        </div>
+      </div>
+    </div>
+
+    <section id="porfolio" class="block container">
+      <div class="py-5">
+        <h2 class="parent-container header header-decoration display-2 px-5">
+          Porfolio
+        </h2>
+      </div>
+      <div id="porfolio" class="porfolio">
+        <div data-aos="fade-left" class="porfolio-box larger-box">
+          <figure>
+            <a id="card-One" class="">
+              <i class="fa-solid fa-computer-mouse click-me-icon"> Click Me</i>
+              <img
+                src="./public/Images/stayHaven.png"
+                class="card-One"
+                identifier="L0"
+                alt="My first bootcamp assignment"
+              />
+            </a>
+
+            <div class="porfolio-description">
+              <div class="d-flex justify-content-between" style="z-index: 999">
+                <h3>StayHaven</h3>
+                <div class="d-flex justify-content-between align-items-center">
+                  <a
+                    target="_blank"
+                    class="card bg-primary text-white mx-3 py-1 px-3"
+                    href="https://github.com/frsargua/STAYHAVEN-APP"
+                    >Repository</a
+                  >
+                  <a
+                    target="_blank"
+                    class="card bg-primary text-white mx-3 py-1 px-3"
+                    href="https://radiant-bayou-46133.herokuapp.com"
+                    >Deployed</a
+                  >
+                </div>
+              </div>
+              <p class="porfolio-description-text">
+                A booking, listing and search site for short stays which
+                requires the user to sign in/up to access the functionalities.
+              </p>
+            </div>
+          </figure>
+        </div>
+
+        <div id="L0" class="d-flex align-items-center pop-up-card">
+          <div
+            class="d-flex flex-column flex-lg-row align-items-center col-11 col-md-8 col-lg-9 mx-auto border border-white custom-height-800 bg-white rounded-3"
+          >
+            <i
+              id="closing-icon-description-card"
+              class="fa-solid fa-xmark closing-icon-description-card"
+            ></i>
+            <div class="col-12 col-lg-7 p-1">
+              <img
+                class="rounded-2 custom-img-width"
+                src="./public/Images/stayHaven.png"
+                alt=""
+              />
+            </div>
+            <div
+              class="col-12 col-lg-5 p-3 d-flex flex-column justify-content-evenly"
+            >
+              <h2>StayHaven</h2>
+              <div class="d-flex flex-wrap">
+                <span class="custom-tags">HTML</span>
+                <span class="custom-tags">CSS</span>
+                <span class="custom-tags">JavaScript</span>
+                <span class="custom-tags">MySQL</span>
+                <span class="custom-tags">UI/UX</span>
+              </div>
+              <h3 class="mt-4 mb-2">About</h3>
+              <div class="card-description">
+                <p>
+                  A booking, listing and search site for short stays which
+                  requires the user to sign in/up to access the functionalities.
+                </p>
+              </div>
+              <div class="d-flex justify-content-around mt-4">
+                <a
+                  target="_blank"
+                  class="card bg-primary p-1 text-white px-3"
+                  href="https://github.com/frsargua/STAYHAVEN-APP"
+                  >Repository</a
+                >
+                <a
+                  target="_blank"
+                  class="card bg-primary p-1 text-white px-3"
+                  href="https://radiant-bayou-46133.herokuapp.com"
+                  >Deployed</a
+                >
+              </div>
+            </div>
           </div>
         </div>
 
-        <div class="about-me-technologies">
-          <h3>Technologies</h3>
-          <div class="logo-group">
-            <div class="logo-container">
+        <div data-aos="fade-left" class="porfolio-box larger-box">
+          <figure>
+            <a id="card-One" class="">
+              <i class="fa-solid fa-computer-mouse click-me-icon"> Click Me</i>
               <img
-                class="logo-img"
-                src="./Assets/Images/javascript.png"
-                alt="javascript logo"
+                src="./public/Images/film-Go.png"
+                class="card-One"
+                identifier="L1"
+                alt="My first bootcamp assignment"
+              />
+            </a>
+
+            <div class="porfolio-description">
+              <div class="d-flex justify-content-between" style="z-index: 999">
+                <h3>Film-Go App</h3>
+                <div class="d-flex justify-content-between align-items-center">
+                  <a
+                    target="_blank"
+                    class="card bg-primary text-white mx-3 py-1 px-3"
+                    href="https://github.com/RamiElsayed/film-go"
+                    >Repository</a
+                  >
+                  <a
+                    target="_blank"
+                    class="card bg-primary text-white mx-3 py-1 px-3"
+                    href="https://ramielsayed.github.io/film-go/"
+                    >Deployed</a
+                  >
+                </div>
+              </div>
+              <p class="porfolio-description-text">
+                A movie search website to bookmark, search by genre and name,
+                any movies supported by IMDB-API library
+              </p>
+            </div>
+          </figure>
+        </div>
+
+        <div id="L1" class="d-flex align-items-center pop-up-card">
+          <div
+            class="d-flex flex-column flex-lg-row align-items-center col-11 col-md-8 col-lg-9 mx-auto border border-white custom-height-800 bg-white rounded-3"
+          >
+            <i
+              id="closing-icon-description-card"
+              class="fa-solid fa-xmark closing-icon-description-card"
+            ></i>
+            <div class="col-12 col-lg-7 p-1">
+              <img
+                class="rounded-2 custom-img-width"
+                src="./public/Images/film-Go.png"
+                alt=""
               />
             </div>
-            <div class="logo-container">
-              <img
-                class="logo-img"
-                src="Assets/Images/html5-logo.png"
-                alt="html5 logo"
-              />
-            </div>
-            <div class="logo-container">
-              <img
-                class="logo-img"
-                src="Assets/Images/css3.jpg"
-                alt="css3 logo"
-              />
+            <div
+              class="col-12 col-lg-5 p-3 d-flex flex-column justify-content-evenly"
+            >
+              <h2>StayHaven</h2>
+              <div class="d-flex flex-wrap">
+                <span class="custom-tags">HTML</span>
+                <span class="custom-tags">CSS</span>
+                <span class="custom-tags">JavaScript</span>
+                <span class="custom-tags">MySQL</span>
+                <span class="custom-tags">UI/UX</span>
+              </div>
+              <h3 class="mt-4 mb-2">About</h3>
+              <div class="card-description">
+                <p>
+                  A movie search website to bookmark, search by genre and name,
+                  any movies supported by IMDB-API library
+                </p>
+              </div>
+              <div class="d-flex justify-content-around mt-4">
+                <a
+                  target="_blank"
+                  class="card bg-primary p-1 text-white px-3"
+                  href="https://github.com/RamiElsayed/film-go"
+                  >Repository</a
+                >
+                <a
+                  target="_blank"
+                  class="card bg-primary p-1 text-white px-3"
+                  href="https://ramielsayed.github.io/film-go/"
+                  >Deployed</a
+                >
+              </div>
             </div>
           </div>
-          <div class="external-links-icons-group">
-            <a href="https://github.com/frsargua" class="logo-container"
-              ><i class="fa-brands fa-github-square"></i
-            ></a>
-            <a href="https://github.com/frsargua" class="logo-container">
-              <i class="fa-brands fa-linkedin"></i>
-            </a>
+        </div>
+
+        <div data-aos="fade-right" class="porfolio-box">
+          <figure>
+            <a>
+              <i class="fa-solid fa-computer-mouse click-me-icon"> Click Me</i>
+
+              <img
+                src="./public/Images/teamprofile.png"
+                alt="Calculator image"
+                class="card-One"
+                identifier="S0"
+            /></a>
+            <div class="porfolio-description">
+              <div class="d-flex justify-content-between" style="z-index: 999">
+                <h3>Team Profile Generator</h3>
+                <div
+                  class="d-flex flex-column flex-lg-row justify-content-between align-items-center"
+                >
+                  <a
+                    target="_blank"
+                    class="card bg-info text-white mx-3 py-1 px-3"
+                    href="https://frsargua.github.io/week10-HW/"
+                    >Repository</a
+                  >
+                  <a
+                    target="_blank"
+                    class="card bg-info text-white mx-3 mt-1 py-1 px-3"
+                    href=""
+                    >Deployed</a
+                  >
+                </div>
+              </div>
+              <p class="porfolio-description-text"></p>
+            </div>
+          </figure>
+        </div>
+
+        <div
+          identifier=""
+          id="S0"
+          class="d-flex align-items-center pop-up-card"
+        >
+          <div
+            class="d-flex flex-column flex-lg-row align-items-center col-11 col-md-8 col-lg-9 mx-auto border border-white custom-height-800 bg-white rounded-3"
+          >
+            <i
+              id="closing-icon-description-card"
+              class="fa-solid fa-xmark closing-icon-description-card"
+            ></i>
+            <div class="col-12 col-lg-7 p-1">
+              <img
+                class="rounded-2 custom-img-width"
+                src="./public/Images/teamprofile.png"
+                alt=""
+              />
+            </div>
+            <div
+              class="col-12 col-lg-5 p-3 d-flex flex-column justify-content-evenly"
+            >
+              <h2>StayHaven</h2>
+              <div class="d-flex flex-wrap">
+                <span class="custom-tags">HTML</span>
+                <span class="custom-tags">CSS</span>
+                <span class="custom-tags">JavaScript</span>
+                <span class="custom-tags">MySQL</span>
+                <span class="custom-tags">UI/UX</span>
+              </div>
+              <h3 class="mt-4 mb-2">About</h3>
+              <div class="card-description">
+                <p>
+                  A terminal app to create a html page containing the members of
+                  a team and their positions
+                </p>
+              </div>
+              <div class="d-flex justify-content-around mt-4">
+                <a
+                  class="card bg-primary p-1 text-white px-3"
+                  href="https://frsargua.github.io/week10-HW/"
+                  >Repository</a
+                >
+                <a
+                  class="card bg-primary p-1 text-white px-3"
+                  href="https://frsargua.github.io/week10-HW/"
+                  >Deployed</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div data-aos="fade-right" class="porfolio-box">
+          <figure>
+            <a>
+              <i class="fa-solid fa-computer-mouse click-me-icon"> Click Me</i>
+
+              <img
+                src="./public/Images/wheather-app.png"
+                alt="Calculator image"
+                class="card-One"
+                identifier="S1"
+            /></a>
+            <div class="porfolio-description">
+              <div class="d-flex justify-content-between" style="z-index: 999">
+                <h3>Weather App</h3>
+                <div
+                  class="d-flex flex-column flex-lg-row justify-content-between align-items-center"
+                >
+                  <a
+                    target="_blank"
+                    class="card bg-info text-white mx-3 py-1 px-3"
+                    href="https://github.com/frsargua/WeekSix_FS"
+                    >Repository</a
+                  >
+                  <a
+                    target="_blank"
+                    class="card bg-info text-white mx-3 mt-1 py-1 px-3"
+                    href="https://frsargua.github.io/WeekSix_FS/"
+                    >Deployed</a
+                  >
+                </div>
+              </div>
+              <p class="porfolio-description-text"></p>
+            </div>
+          </figure>
+        </div>
+
+        <div
+          identifier=""
+          id="S1"
+          class="d-flex align-items-center pop-up-card"
+        >
+          <div
+            class="d-flex flex-column flex-lg-row align-items-center col-11 col-md-8 col-lg-9 mx-auto border border-white custom-height-800 bg-white rounded-3"
+          >
+            <i
+              id="closing-icon-description-card"
+              class="fa-solid fa-xmark closing-icon-description-card"
+            ></i>
+            <div class="col-12 col-lg-7 p-1">
+              <img
+                class="rounded-2 custom-img-width"
+                src="./public/Images/wheather-app.png"
+                alt=""
+              />
+            </div>
+            <div
+              class="col-12 col-lg-5 p-3 d-flex flex-column justify-content-evenly"
+            >
+              <h2>StayHaven</h2>
+              <div class="d-flex flex-wrap">
+                <span class="custom-tags">HTML</span>
+                <span class="custom-tags">CSS</span>
+                <span class="custom-tags">JavaScript</span>
+                <span class="custom-tags">MySQL</span>
+                <span class="custom-tags">UI/UX</span>
+              </div>
+              <h3 class="mt-4 mb-2">About</h3>
+              <div class="card-description">
+                <p>
+                  The app allows the user to search for the weather forecast for
+                  a given location and saves it to the local storage.
+                </p>
+              </div>
+              <div class="d-flex justify-content-around mt-4">
+                <a
+                  class="card bg-primary p-1 text-white px-3"
+                  href="https://github.com/frsargua/WeekSix_FS"
+                  >Repository</a
+                >
+                <a
+                  class="card bg-primary p-1 text-white px-3"
+                  href="https://github.com/frsargua/WeekSix_FS"
+                  >Deployed</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div data-aos="fade-right" class="porfolio-box">
+          <figure>
+            <a>
+              <i class="fa-solid fa-computer-mouse click-me-icon"> Click Me</i>
+
+              <img
+                src="./public/Images/quizz-app.png"
+                alt="Calculator image"
+                class="card-One"
+                identifier="S2"
+            /></a>
+            <div class="porfolio-description">
+              <div class="d-flex justify-content-between" style="z-index: 999">
+                <h3>Quiz App</h3>
+                <div
+                  class="d-flex flex-column flex-lg-row justify-content-between align-items-center"
+                >
+                  <a
+                    target="_blank"
+                    class="card bg-info text-white mx-3 py-1 px-3"
+                    href="https://github.com/frsargua/WeekFourHW_FS"
+                    >Repository</a
+                  >
+                  <a
+                    target="_blank"
+                    class="card bg-info text-white mx-3 mt-1 py-1 px-3"
+                    href="https://frsargua.github.io/WeekFourHW_FS/"
+                    >Deployed</a
+                  >
+                </div>
+              </div>
+              <p class="porfolio-description-text"></p>
+            </div>
+          </figure>
+        </div>
+
+        <div
+          identifier=""
+          id="S2"
+          class="d-flex align-items-center pop-up-card"
+        >
+          <div
+            class="d-flex flex-column flex-lg-row align-items-center col-11 col-md-8 col-lg-9 mx-auto border border-white custom-height-800 bg-white rounded-3"
+          >
+            <i
+              id="closing-icon-description-card"
+              class="fa-solid fa-xmark closing-icon-description-card"
+            ></i>
+            <div class="col-12 col-lg-7 p-1">
+              <img
+                class="rounded-2 custom-img-width"
+                src="./public/Images/quizz-app.png"
+                alt=""
+              />
+            </div>
+            <div
+              class="col-12 col-lg-5 p-3 d-flex flex-column justify-content-evenly"
+            >
+              <h2>StayHaven</h2>
+              <div class="d-flex flex-wrap">
+                <span class="custom-tags">HTML</span>
+                <span class="custom-tags">CSS</span>
+                <span class="custom-tags">JavaScript</span>
+                <span class="custom-tags">MySQL</span>
+                <span class="custom-tags">UI/UX</span>
+              </div>
+              <h3 class="mt-4 mb-2">About</h3>
+              <div class="card-description">
+                <p>A short quiz app</p>
+              </div>
+              <div class="d-flex justify-content-around mt-4">
+                <a
+                  class="card bg-primary p-1 text-white px-3"
+                  href="https://github.com/frsargua/WeekFourHW_FS"
+                  >Repository</a
+                >
+                <a
+                  class="card bg-primary p-1 text-white px-3"
+                  href="https://github.com/frsargua/WeekFourHW_FS"
+                  >Deployed</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div data-aos="fade-right" class="porfolio-box">
+          <figure>
+            <a>
+              <i class="fa-solid fa-computer-mouse click-me-icon"> Click Me</i>
+
+              <img
+                src="./public/Images/Scheduler-app.png"
+                alt="Calculator image"
+                class="card-One"
+                identifier="S3"
+            /></a>
+            <div class="porfolio-description">
+              <div class="d-flex justify-content-between" style="z-index: 999">
+                <h3>Scheduler App</h3>
+                <div
+                  class="d-flex flex-column flex-lg-row justify-content-between align-items-center"
+                >
+                  <a
+                    target="_blank"
+                    class="card bg-info text-white mx-3 py-1 px-3"
+                    href="https://github.com/frsargua/WeekFive_FS"
+                    >Repository</a
+                  >
+                  <a
+                    target="_blank"
+                    class="card bg-info text-white mx-3 mt-1 py-1 px-3"
+                    href="https://frsargua.github.io/WeekFive_FS/"
+                    >Deployed</a
+                  >
+                </div>
+              </div>
+              <p class="porfolio-description-text"></p>
+            </div>
+          </figure>
+        </div>
+
+        <div
+          identifier=""
+          id="S3"
+          class="d-flex align-items-center pop-up-card"
+        >
+          <div
+            class="d-flex flex-column flex-lg-row align-items-center col-11 col-md-8 col-lg-9 mx-auto border border-white custom-height-800 bg-white rounded-3"
+          >
+            <i
+              id="closing-icon-description-card"
+              class="fa-solid fa-xmark closing-icon-description-card"
+            ></i>
+            <div class="col-12 col-lg-7 p-1">
+              <img
+                class="rounded-2 custom-img-width"
+                src="./public/Images/Scheduler-app.png"
+                alt=""
+              />
+            </div>
+            <div
+              class="col-12 col-lg-5 p-3 d-flex flex-column justify-content-evenly"
+            >
+              <h2>StayHaven</h2>
+              <div class="d-flex flex-wrap">
+                <span class="custom-tags">HTML</span>
+                <span class="custom-tags">CSS</span>
+                <span class="custom-tags">JavaScript</span>
+                <span class="custom-tags">MySQL</span>
+                <span class="custom-tags">UI/UX</span>
+              </div>
+              <h3 class="mt-4 mb-2">About</h3>
+              <div class="card-description">
+                <p></p>
+              </div>
+              <div class="d-flex justify-content-around mt-4">
+                <a
+                  class="card bg-primary p-1 text-white px-3"
+                  href="https://github.com/frsargua/WeekFive_FS"
+                  >Repository</a
+                >
+                <a
+                  class="card bg-primary p-1 text-white px-3"
+                  href="https://github.com/frsargua/WeekFive_FS"
+                  >Deployed</a
+                >
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </section>
-    <section id="contact-me" class="contact-me">
-      <div class="contact-me-action">
-        <h3>Ready to hire me?</h3>
-        <button
-          id="contact-me-button"
-          class="action-button contact-me-action-button"
+
+    <section
+      data-aos="zoom-in"
+      data-aos-duration="600"
+      class="d-flex align-items-center form container section-header"
+    >
+      <div
+        id="form-card"
+        class="d-flex flex-column col-11 col-md-6 mx-auto card px-5 py-4 rounded-4 custom-card"
+      >
+        <h3 class="text-center">Contact me!</h3>
+        <form
+          action="https://formspree.io/f/xgedgbow"
+          method="post"
+          class="mb-3 col-12 mx-auto"
         >
-          Contact me now!
-        </button>
-      </div>
-      <div id="form-container" class="form-container">
-        <a href="mailto: frsargua@gmail.com">Email Me</a>
-        <a href="tel:07542351359">Phone me!</a>
+          <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label"
+              >Name</label
+            >
+            <input
+              type="text"
+              class="form-control"
+              id="exampleFormControlInput1"
+              name="name"
+              placeholder="Full Name"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label"
+              >Email address</label
+            >
+            <input
+              type="email"
+              class="form-control"
+              name="email"
+              id="exampleFormControlInput1"
+              placeholder="name@example.com"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="exampleFormControlTextarea1" class="form-label"
+              >Example textarea</label
+            >
+            <textarea
+              class="form-control"
+              id="exampleFormControlTextarea1"
+              rows="3"
+              name="message"
+              placeholder="Ask me anything"
+            ></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
       </div>
     </section>
-    <script src="/Assets/index.js"></script>
+
+    <footer id="contact-me" class="contact-me">
+      <div class="contact-me-action">
+        <a
+          href="https://github.com/frsargua"
+          class="logo-container"
+          target="_blank"
+          ><i class="fa-brands fa-github-square"></i
+        ></a>
+        <a
+          href="https://www.linkedin.com/in/fabiansarango/"
+          class="logo-container"
+          target="_blank"
+        >
+          <i class="fa-brands fa-linkedin"></i>
+        </a>
+        <a href="tel:+00447542351359" class="logo-container" target="_blank">
+          <i class="fa-solid fa-phone"></i>
+        </a>
+        <a
+          href="mailto:frsargua@gmail.com"
+          class="logo-container"
+          target="_blank"
+        >
+          <i class="fa-solid fa-envelope"></i>
+        </a>
+      </div>
+    </footer>
+    <!-- JavaScript Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+    <script
+      type="text/javascript"
+      src="//code.jquery.com/jquery-1.11.0.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="//code.jquery.com/jquery-migrate-1.2.1.min.js"
+    ></script>
+    <script type="text/javascript" src="slick/slick.min.js"></script>
+    <script src="./public/js/index.js"></script>
   </body>
 </html>

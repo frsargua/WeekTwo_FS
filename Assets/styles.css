@@ -11,7 +11,7 @@
   --border-radius: 5px;
   --box-shadow-color: #f3f3f3;
   /* Transition */
-  --scale-factor: 1.03;
+  --scale-factor: 1.05;
 }
 
 * {
@@ -23,6 +23,9 @@
 body {
   color: var(--font-primary-color);
   font-family: Inter, Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
+  /* background-color: var(--background-primary); */
+  transition: all 650ms ease-in-out;
 }
 
 h2 {
@@ -52,7 +55,8 @@ header {
   padding: 0 1rem;
   position: fixed;
   width: 100%;
-  z-index: 999;
+  z-index: 99;
+  height: 55px;
 }
 
 /* This makes the navlogo and the a tag links be push to separate ends in a row (for desktop)*/
@@ -76,19 +80,22 @@ header {
 /* Max height of 0 allows makes the navbar non visible when the check box is not clicked */
 .navbar-container .navbar {
   background-color: var(--background-primary);
-  max-height: 0;
+  max-height: 100%;
   transition: all 0s ease;
+  padding: 0;
 }
 
 /* Desktop - makes links be in a row */
 .navbar ul {
   display: flex;
   flex-direction: row;
+  margin: 0;
 }
 
 /* Keeps a links separated, so they do not stick side by side */
 .navbar > ul > li {
-  padding: 1rem 2rem;
+  padding: 0.9rem 2rem;
+  list-style: none;
 }
 
 /* Removes a tag decoration  */
@@ -114,6 +121,10 @@ header {
   .navbar-container {
     flex-direction: column;
     align-items: center;
+  }
+
+  .navbar-container .navbar {
+    max-height: 0px;
   }
 
   /* Makes nav-bar li be in a column wit the text to the left */
@@ -291,6 +302,35 @@ header {
 
 /* <--------------------------Porfolio Section---------------------------> */
 
+.parent-container {
+  position: relative;
+  text-align: center;
+}
+.header-decoration {
+  background-color: white;
+  width: fit-content;
+  margin: auto;
+}
+
+.header-decoration::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -50vw;
+  width: 2000px;
+  border-bottom: calc(0.2px + 0.08em) solid var(--background-primary);
+  z-index: -1;
+}
+.header-decoration::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 2000px;
+  border-bottom: calc(0.2px + 0.08em) solid var(--background-primary);
+  z-index: -1;
+}
+
 .porfolio {
   display: flex;
   flex-direction: row;
@@ -298,7 +338,7 @@ header {
 }
 
 .porfolio-box {
-  flex: 0 0 33.333%;
+  flex: 0 0 50%;
   padding: 1rem;
 }
 
@@ -339,7 +379,7 @@ header {
 }
 
 .porfolio-box:hover figure {
-  box-shadow: 0 0 10px 10px #f4f4f4;
+  box-shadow: 0 0 10px 7px #c0c0c0bc;
 }
 
 .porfolio-box figure:hover .porfolio-description p {
@@ -377,9 +417,8 @@ header {
 .about-me {
   display: flex;
   flex-direction: column;
-  width: 90%;
   margin: auto;
-  box-shadow: 0 0 20px 10px var(--box-shadow-color);
+  /* box-shadow: 0 0 20px 10px var(--box-shadow-color); */
   border-radius: 10px;
   padding: 2rem;
 }
@@ -405,7 +444,7 @@ header {
 
 /* Makes image take 25% of the width of the parent container */
 .about-me-Container .about-me-photo {
-  flex: 0 0 25%;
+  flex: 0 0 35%;
   border-radius: 50%;
   box-shadow: 0 0 5px 1px var(--box-shadow-color);
   overflow: hidden;
@@ -416,7 +455,7 @@ header {
 }
 
 .about-me-Container > .text {
-  flex: 0 0 70%;
+  flex: 0 0 60%;
   width: 100%;
 }
 
@@ -426,14 +465,20 @@ header {
   padding-bottom: 1.5rem;
 }
 .logo-group {
+  width: 100vw;
+  left: 0;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
 }
+
 .logo-group .logo-container {
-  flex: 0 0 10%;
+  flex: 0 0 5%;
   border-radius: 50%;
   overflow: hidden;
+}
+.logo-container:hover {
+  transform: scale(var(--scale-factor));
 }
 .logo-group .logo-container .logo-img {
   width: 100%;
@@ -489,18 +534,22 @@ header {
 
 .contact-me .contact-me-action {
   background-color: var(--background-primary);
-  height: 10vh;
+  height: 5vh;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   width: 100%;
   padding: 0 2rem;
 }
 
-.contact-me .contact-me-action h3 {
-  font-size: 2rem;
+.contact-me .contact-me-action a {
+  font-size: 1.7rem;
   color: var(--font-secondary-color);
+}
+
+.form {
+  height: 70vh;
 }
 
 .form-container {
@@ -531,9 +580,129 @@ header {
 
 @media screen and (max-width: 768px) {
   .contact-me .contact-me-action {
-    flex-direction: column;
+    flex-direction: row;
     justify-content: space-evenly;
     height: 20vh;
     text-align: center;
+  }
+}
+
+.custom-card {
+  box-shadow: 10px 15px 0 0 var(--background-secondary);
+  transition: all 700ms ease-in-out;
+}
+
+.custom-card:hover {
+  box-shadow: 5px 5px 0 0 var(--background-secondary);
+}
+
+.custom-card,
+.custom-tags {
+  width: fit-content;
+  padding: 0rem 0.5rem;
+  margin: 0.1rem 5px;
+  border: 2px solid black;
+}
+
+.card-description {
+  height: 200px;
+  overflow: scroll;
+}
+.custom-height-800 {
+  max-height: 450px;
+  max-width: 1150px;
+  position: relative;
+}
+
+.custom-img-width {
+  width: 99%;
+  max-width: 650px;
+  margin: auto;
+}
+
+.height-100vh {
+  height: 100vh;
+}
+
+.click-me-icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 2;
+  background-color: rgb(242, 234, 250);
+  font-size: 1rem;
+  padding: 0.7rem;
+  border-bottom-left-radius: 10px;
+  animation: color-change 5s infinite;
+}
+
+@keyframes color-change {
+  0% {
+    color: #ed4264;
+  }
+
+  20% {
+    color: purple;
+  }
+  40% {
+    color: blue;
+  }
+  60% {
+    color: #ffc371;
+  }
+  80% {
+    color: #ffa571;
+  }
+  100% {
+    color: #ed4264;
+  }
+}
+
+.closing-icon-description-card {
+  background-color: rgb(255, 255, 255);
+  border: 2px solid black;
+  padding: 0 0.6rem;
+  border-radius: 25px;
+  position: absolute;
+  top: -25px;
+  right: -15px;
+  font-size: 3rem;
+}
+.closing-icon-description-card:hover {
+  color: rgb(255, 80, 67);
+  transform: scale(var(--scale-factor));
+}
+
+.pop-up-card {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  height: 0;
+  left: 0;
+  right: 0;
+  z-index: 3;
+  overflow: hidden;
+  background-color: rgba(67, 67, 67, 0.779);
+}
+
+footer {
+  position: fixed;
+  opacity: 0.9;
+  bottom: 0%;
+  width: 100%;
+  z-index: 999;
+}
+@media screen and (max-width: 1150px) {
+  .card-description {
+    height: 100px;
+  }
+}
+
+@media screen and (max-width: 975px) {
+  .card-description {
+    height: 250px;
+  }
+  .custom-height-800 {
+    max-height: fit-content;
   }
 }
