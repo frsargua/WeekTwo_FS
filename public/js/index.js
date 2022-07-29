@@ -16,8 +16,16 @@ closingIconEl.click(function () {
     overflow: "auto",
   });
 });
-openingTag.click(function () {
-  $(this).siblings().css({ height: "100vh", transition: "all 400ms" });
+openingTag.click(function (e) {
+  let indetifierIdSelector = $(e.currentTarget)
+    .closest(".card-One")
+    .attr("identifier");
+
+  $(`#${indetifierIdSelector}`).css({
+    height: "100vh",
+    width: "100vw",
+    transition: "all 400ms",
+  });
   $("html").css({
     overflow: "hidden",
   });

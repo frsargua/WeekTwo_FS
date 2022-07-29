@@ -617,8 +617,9 @@ header {
 }
 
 .custom-img-width {
-  width: 99%;
+  max-width: 99%;
   max-width: 650px;
+  max-height: 450px;
   margin: auto;
 }
 
