@@ -358,7 +358,7 @@ header {
 .porfolio-box figure .porfolio-description {
   background-color: rgba(0, 0, 0, 0.853);
   width: 100%;
-  padding: 1rem;
+  padding: 0.5rem;
   position: absolute;
   bottom: 0;
   color: var(--font-secondary-color);
@@ -372,11 +372,13 @@ header {
 /* } */
 
 .porfolio-box figure:hover .porfolio-description h3 {
-  padding-bottom: 0.5rem;
+  margin-bottom: 0.5rem;
 }
 .porfolio-box figure .porfolio-description p {
-  display: none;
+  /* display: none; */
+  height: 0;
   overflow-x: hidden;
+  transition: all 400ms ease-in;
 }
 
 .porfolio-box:hover figure {
@@ -384,7 +386,9 @@ header {
 }
 
 .porfolio-box figure:hover .porfolio-description p {
-  display: block;
+  /* display: block; */
+  height: auto;
+  transition: all 400ms ease-in;
 }
 
 .porfolio-box:hover {

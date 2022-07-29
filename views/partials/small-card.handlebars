@@ -6,9 +6,26 @@
     identifier="S{{@index}}"
   >
     <figure>
-      <a><img src="{{imageUrl}}" alt="Calculator image" /></a>
+      <a>
+        <i class="fa-solid fa-computer-mouse click-me-icon"> Click Me</i>
+
+        <img src="{{imageUrl}}" alt="Calculator image" /></a>
       <div class="porfolio-description">
-        <h3>{{title}}</h3>
+        <div class="d-flex justify-content-between">
+          <h3>{{title}}</h3>
+          <div class="d-flex justify-content-between align-items-center">
+            <a
+              target="_blank"
+              class="card bg-info text-white mx-3 py-1 px-3"
+              href="{{repoUrl}}"
+            >Repository</a>
+            <a
+              target="_blank"
+              class="card bg-info text-white mx-3 py-1 px-3"
+              href="{{repoUrl}}"
+            >Deployed</a>
+          </div>
+        </div>
         <p class="porfolio-description-text"></p>
       </div>
     </figure>
